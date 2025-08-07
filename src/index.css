@@ -1,3 +1,17 @@
+@import 'tailwindcss';
+
+.custom-card {
+  @apply rounded-2xl p-10; /* Check if custom styles working */
+}
+
+/* body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -65,4 +79,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
