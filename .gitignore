@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Other files to ignore
+src/components/MainContent_2.tsx

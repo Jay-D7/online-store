@@ -1,7 +1,7 @@
+import './App.css';
 import { Header } from './components/Header';
 import { MainContent } from './components/MainContent';
 import { SearchProvider } from './contexts/SearchContext';
-import './App.css';
 
 export const App = () => (
   <SearchProvider>
