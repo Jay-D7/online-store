@@ -45,6 +45,9 @@ export const useProducts = () => {
         //   await new Promise((resolve) => setTimeout(resolve, 1500)); // 1.5 second delay for initial load
         // }
 
+        // Testing ErrorState component
+        // throw new Error('Testing ErrorState component!');
+
         if (search) {
           // Search products when there's a search query
           const response = await fetch(
@@ -61,8 +64,8 @@ export const useProducts = () => {
           // Fetch iPhones and watches for Featured Products
           const [phonesResponse, watchesResponse, allProductsResponse] =
             await Promise.all([
-              fetch('https://dummyjson.com/products/search?q=iphone&limit=15'),
-              fetch('https://dummyjson.com/products/search?q=watch&limit=15'),
+              fetch('https://dummyjson.com/products/search?q=iphone&limit=10'),
+              fetch('https://dummyjson.com/products/search?q=watch&limit=10'),
               fetch('https://dummyjson.com/products?limit=20'),
             ]);
 
@@ -83,7 +86,7 @@ export const useProducts = () => {
           // Combine iPhones and watches for Featured Products
           const iphones = phonesData.products.map(convertAPIProduct);
           const watches = watchesData.products.map(convertAPIProduct);
-          const featuredItems = [...iphones, ...watches].slice(0, 15); // Limit to 15 total
+          const featuredItems = [...iphones, ...watches].slice(0, 10); // Limit to 10 total
 
           // Use other products for New Arrivals (excluding phones and watches)
           const allProducts = allProductsData.products.map(convertAPIProduct);
